@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "DooPlay Downlaod Links Importer V1",
+  "version": "2.0",
+  "description": "Automatically processes and adds download links with smart detection",
+  
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Auto Add Links"
+  }
+}
